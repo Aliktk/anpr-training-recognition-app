@@ -22,7 +22,7 @@ if uploaded_file is not None:
         frame = cv2.imread("saved_image.jpg")
 
         # Load the YOLO model (ensure the model path is correct)
-        model = YOLO("../../best.pt")
+        model = YOLO("best.pt")
 
         # Perform plate detection
         results = model(frame, save=True)
