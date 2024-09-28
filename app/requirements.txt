@@ -1,0 +1,13 @@
+torch
+ultralytics
+opencv-python
+streamlit
+easyocr
+numpy
+hydra
+Pillow
+matplotlib
+scikit-image
+scipy
+torchvision
+PyYAML

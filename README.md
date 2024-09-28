@@ -34,7 +34,6 @@ This project implements a License Plate Detection System using **YOLOv8** and **
 - **CLI Support**: Provides command-line functionality for detection on video files or images. 💻
 - **Streamlit Integration**: Deploy a user-friendly web interface to upload and detect license plates interactively. 🌐
 - **Custom Dataset**: The model is trained on a custom dataset using Roboflow for precise performance. 📊
-- **Performance Logging**: Logs the detection process with detailed information and error handling. 📜
 
 ---
 
@@ -42,7 +41,8 @@ This project implements a License Plate Detection System using **YOLOv8** and **
 
 ```bash
 .
-├── README.md               # Project documentation
+├── app/                    # Streamlit app code
+├── App Test Data/                 # Pre-trained models or checkpoints
 dataset/
 ├── train/
 │   ├── images/
@@ -57,15 +57,23 @@ dataset/
 │   │   ├── image2.jpg
 │   └── labels/
 │       ├── image1.txt
-|── logs/                   # Log files for detection process
 ├── runs/                   # Model checkpoints and result logs
+|── ultralytics/                   # Log files for detection process
 ├── models/                 # Pre-trained models or checkpoints
-├── app/                    # Streamlit app code
 ├── detect_modified.py       # Main detection script with YOLOv8 and OCR
 ├── requirements.txt        # Python dependencies
-└── config.yaml             # YOLOv8 model configuration
-
-
+└── config.yaml
+└── best.pt
+└── custom_training.ipynb
+└── data.yaml
+└── LICENSE
+└── predict_modified.py
+└── README.md
+└── requirements.txt
+└── train_test.ipynb
+└── ultralytics
+└── yolov8n.pt
+└── yolov8x.pt             # YOLOv8 model configuration
 ```
 
 ## Prerequisites ⚙️
@@ -80,7 +88,6 @@ To install dependencies, run:
 
 ```bash
 pip install -r requirements.txt
-
 ```
 
 ## How to Run 🚀
@@ -91,7 +98,6 @@ You can run the License Plate Detection System in CLI mode by executing the foll
 
 ```bash
 python detect_modified.py model='ultralytics/runs/detect/train_model/weights/best.pt' source='path_to_video_or_image'
-
 ```
 
 Replace `path_to_video_or_image` with the path to your input file (video or image). The detected license plates will be displayed, and OCR will be performed to extract the text.
@@ -103,9 +109,9 @@ To interact with the detection system via a web interface, run the Streamlit app
 1. Navigate to the app directory where the `Main.py` file is located. 📁
 2. Run the following command:
 
-    ```bash
-    streamlit run app/Main.py
-    ```
+   ```bash
+   streamlit run app/Main.py
+   ```
 
 This will launch the Streamlit web app on localhost. You can upload images or videos, and the app will detect and display the results, including the extracted license plate text. 📸
 
@@ -115,46 +121,8 @@ This will launch the Streamlit web app on localhost. You can upload images or vi
 - **View Detections:** 👀 Detected license plates will be displayed along with the extracted text from the plates.
 
 ---
-Open your browser and go to the provided URL (usually localhost:8501) to interact with the app.
 
-## Configuration ⚙️
-
-You can modify the YOLOv8 configuration by updating the `config.yaml` file. Key configuration options include:
-
-- **Model Path:** 📂 Define the path to the YOLOv8 model checkpoint.
-- **Confidence Threshold:** 📊 Adjust the confidence threshold for detections.
-- **Image Size:** 📏 Set the input image size for detection.
-
-### Example Configuration:
-
-```yaml
-model: 'ultralytics/runs/detect/train_model/weights/best.pt'
-imgsz: 640
-conf: 0.25
-iou: 0.45
-max_det: 1000
-device: 0
-```
-
-## Example Usage 📋
-
-### CLI Detection for Image 📷
-
-To run detection on an image file, execute the following command:
-
-```bash
-python detect_modified.py model='ultralytics/runs/detect/train_model/weights/best.pt' source='test_image.jpg'
-```
-
-## Example Usage
-
-### CLI Detection for Video 🎥
-
-To run detection on a video file, use the command below:
-
-```bash
-python detect_modified.py model='ultralytics/runs/detect/train_model/weights/best.pt' source='test_video.mp4'
-```
+Open your browser and go to the provided URL (usually `localhost:8501`) to interact with the app.
 
 ## Future Enhancements 🚀
 
@@ -168,10 +136,9 @@ python detect_modified.py model='ultralytics/runs/detect/train_model/weights/bes
 - **YOLOv8:** For the base model used for object detection.
 - **EasyOCR:** For Optical Character Recognition.
 
-
 ## Follow Us for Updates! 🌟
 
-Stay tuned for updates and enhancements to the License Plate Detection System! 
+Stay tuned for updates and enhancements to the License Plate Detection System!
 
 - **GitHub:** [Alitktk](https://github.com/Alitktk) – Check out the repository for the latest code and releases. ⭐️
 - **Feedback:** Your feedback is important! Please raise issues or suggestions on GitHub.

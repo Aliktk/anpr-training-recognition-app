@@ -11,6 +11,7 @@ from ultralytics.yolo.utils.plotting import Annotator, colors, save_one_box
 import easyocr
 import cv2
 
+
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
