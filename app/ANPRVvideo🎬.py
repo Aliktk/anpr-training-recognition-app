@@ -28,8 +28,8 @@ if st.session_state.value_set:
             temp_file.close()
 
             # Load the YOLO models
-            model = YOLO('yolov8x.pt')  # Pre-trained YOLO model for tracking
-            lp_detector = YOLO("best.pt")  # Custom model for license plate detection
+            model = YOLO('../models/yolov8x.pt')  # Pre-trained YOLO model for tracking
+            lp_detector = YOLO("../models/best.pt")  # Custom model for license plate detection
             reader = easyocr.Reader(['en'], gpu=True)
 
             # Open video file
