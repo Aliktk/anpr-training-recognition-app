@@ -39,7 +39,6 @@ This project implements a License Plate Detection System using **YOLOv8** and **
 
 ## 📁 Project Structure
 
-```bash
 .
 ├── app/                    # Streamlit app code
 ├── App Test Data/                 # Pre-trained models or checkpoints
@@ -63,7 +62,6 @@ dataset/
 ├── detect_modified.py       # Main detection script with YOLOv8 and OCR
 ├── requirements.txt        # Python dependencies
 └── config.yaml
-└── best.pt
 └── custom_training.ipynb
 └── data.yaml
 └── LICENSE
@@ -72,9 +70,6 @@ dataset/
 └── requirements.txt
 └── train_test.ipynb
 └── ultralytics
-└── yolov8n.pt
-└── yolov8x.pt             # YOLOv8 model configuration
-```
 
 ## Prerequisites ⚙️
 
@@ -115,21 +110,13 @@ To interact with the detection system via a web interface, run the Streamlit app
 
 This will launch the Streamlit web app on localhost. You can upload images or videos, and the app will detect and display the results, including the extracted license plate text. 📸
 
-## Using the Streamlit App Features 🛠️
-
-- **Upload Files:** 📤 Upload an image or video for real-time license plate detection.
-- **View Detections:** 👀 Detected license plates will be displayed along with the extracted text from the plates.
-
 ---
-
-Open your browser and go to the provided URL (usually `localhost:8501`) to interact with the app.
 
 ## Future Enhancements 🚀
 
 - **OCR Language Support:** Add support for multiple languages for OCR using EasyOCR. 🌍
 - **Improved Post-processing:** Implement advanced post-processing to enhance OCR results on low-quality license plates. 🔧
 - **Real-time Video Stream Support:** Extend functionality to support real-time detection from a video feed (e.g., a camera). 📹
-- **Docker Support:** Add a Dockerfile to containerize the application for easy deployment. 🐳
 
 ## Acknowledgements 🙏
 
@@ -142,6 +129,6 @@ Stay tuned for updates and enhancements to the License Plate Detection System!
 
 - **GitHub:** [Alitktk](https://github.com/Alitktk) – Check out the repository for the latest code and releases. ⭐️
 - **Feedback:** Your feedback is important! Please raise issues or suggestions on GitHub.
-- **Social Media:** Follow us on [Twitter]((https://www.twitter.com/engr_ali_nawaz)) and [LinkedIn](https://www.linkedin.com/in/ali-nawaz-khattak/) for the latest news and updates!
+- **Social Media:** Follow us on [Twitter](https://www.twitter.com/engr_ali_nawaz)) and [LinkedIn](https://www.linkedin.com/in/ali-nawaz-khattak/) for the latest news and updates!
 
 Thank you for your support! 💖
