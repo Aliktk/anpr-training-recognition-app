@@ -142,6 +142,6 @@ Stay tuned for updates and enhancements to the License Plate Detection System!
 
 - **GitHub:** [Alitktk](https://github.com/Alitktk) – Check out the repository for the latest code and releases. ⭐️
 - **Feedback:** Your feedback is important! Please raise issues or suggestions on GitHub.
-- **Social Media:** Follow us on [Twitter]([#](https://twitter.com/engr_ali_nawaz)) and [LinkedIn](https://www.linkedin.com/in/ali-nawaz-khattak/) for the latest news and updates!
+- **Social Media:** Follow us on [Twitter]((https://www.twitter.com/engr_ali_nawaz)) and [LinkedIn](https://www.linkedin.com/in/ali-nawaz-khattak/) for the latest news and updates!
 
 Thank you for your support! 💖
