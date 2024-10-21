@@ -39,7 +39,7 @@ This project implements a License Plate Detection System using **YOLOv8** and **
 
 ## 📁 Project Structure
 
-.
+```
 ├── app/                    # Streamlit app code
 ├── App Test Data/                 # Pre-trained models or checkpoints
 dataset/
